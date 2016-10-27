@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="format-detection", content="telephone=no")
+    
+    title Boilerplate
+    
+    link(rel="stylesheet" href="./css/main.css")
+    
+    
+  body#body
+  
+    include ./templates/blocks/header.jade
+    //- include ./blocks/parik.jade
+    //- include ./blocks/nails.jade
+    //- include ./blocks/kosmo.jade
+    //- include ./blocks/depil.jade
+    //- include ./blocks/main.jade
+
+    section#content
+
+    include ./templates/blocks/footer.jade
+    
+    script(type="text/javascript" src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU")
+    //- script(src="js/lib/jquery.js")
+    //- script(src="js/lib/jquery.lightbox_me.js")
+    script(src="js/main.js")

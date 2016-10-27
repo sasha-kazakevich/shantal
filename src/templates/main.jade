@@ -1,0 +1,61 @@
+mixin service(href,decor,text)
+  a(href= href).services__service
+    div.services__image-block(class= "services__image-block--"+decor)
+    div.services__text-block= text
+
+
+main.main
+  section.slider
+    div.content-wrapper
+      h1.slider__title Салон красоты
+      p.slider__text Добро пожаловать в салон красоты «Шанталь» –место, где мечта становится реальностью, а&#160;реальность обретает новые краски. Многие умеют мечтать. Те, кто способны воплотить мечты в&#160;реальность, встречаются гораздо реже, и мы - одни из них.
+  section.about#b
+    div.content-wrapper
+      h1.main__title О нас
+      p.about__text Создавая салон красоты "Шанталь", мы старались, чтобы здесь было хорошо всем: большим и маленьким, мужчинам и женщинам. И даже бабушкам, которые не только приводят к нам своих внуков, но и о себе любимых не забывают - балуются чашечкой кофе, поджидая наследников, и с удовольствием пользуются нашими услугами. Это еще раз убеждает в том, что красоте все возрасты покорны.
+      p.about__text  Тонкое искусство настоящего мастера — увидеть подлинную красоту человека и раскрыть ее, добавив необходимые штрихи. Наш посетитель — не просто клиент, оторому мы оказываем профессиональные услуги — это наш желанный гость, которого мы рады принять и помочь в создании эффектного и гармоничного образа. Мы с удовольствием подарим Вам атмосферу праздника и комфорта, поделимся чувством красоты и гармонии!
+      p.about__text Наш салон красоты создан для Вас, фундаментом которого являются Ваши пожелания: быть КРАСИВЫМИ, ЛЮБИМЫМИ И ЖЕЛАННЫМИ!<br/> Мы не волшебники. Мы, просто, помогаем Вам подчеркнуть Вашу естественную красоту!
+      div.about__images
+        div.about__image.about__image--massage
+        div.about__image.about__image--man
+        div.about__image.about__image--eyebrows
+        div.about__image.about__image--hair
+      p.about__text  Также, Вы можете воспользоваться услугами подключения к сети Интернет Wi-Fi.
+      p.about__text  Мы всегда рады предложить Вам воспользоваться нашими <br/> ПОДАРОЧНЫМИ СЕРТИФИКАТАМИ.
+      p.about__text  Нам хотелось бы подружиться с Вами!
+      p.about__text  И мы будем рады, если Вы зайдете к нам в салон красоты даже просто на чашечку кофе или за хорошим настроением!
+      p.about__text  Мы всегда дорожим постоянными клиентами салона красоты "Шанталь"!
+      p.about__text  И, конечно же, всегда рады новым посетителям!
+  section.services#c
+    div.content-wrapper
+      h1.main__title.main__title--white Наши услуги
+      +service("/parik","barbershop","Парикмахерские услуги")
+      +service("/kosmo","kosmetic","Косметологическая программа")
+      +service("/nails","nails","Ногтевая студия")
+      +service("/depil","depilation","Депиляция")
+      +service("","certificate","Подарочный сертификат")
+  section.contacts#d
+    div.content-wrapper
+      h1.main__title Где мы
+      p.contacts__info Мы с удовольствием приглашаем Вас посетить&#160;наш салон красоты, расположенный&#160;в престижном районе Минска. 
+      div.contacts__adress-info
+        p.contacts__adress Ждем Вас в нашем салоне по адресу:<br/> г. Минск, ул. Ложинская, д. 5.<br/> Ближайшая к нам станция метро — Уручье.
+        p.contacts__working-hours Время работы:
+          br
+          span.contacts__space пн.-пт. с 9.00 до 21.00,
+          br
+          span.contacts__space сб. с 9.00 до 19.00,
+          br
+          span.contacts__space вс. с 10.00 до 17.00
+        p.contacts__numbers Телефон: 
+          br
+          span.contacts__space + 375 (17) 393 67 21
+          br
+          span.contacts__space + 375 (33) 393 44 26
+          br
+          span.contacts__space + 375 (29) 171 44 26
+        p.contacts__email Электронная почта:
+          br
+          span.contacts__space shantalsalon@tut.by
+      div.contacts__map
+        img(id="title" src="img/main/contacts/map.png") 

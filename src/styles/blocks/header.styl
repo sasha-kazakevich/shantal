@@ -1,0 +1,51 @@
+.header
+  background url('../img/header/header-bg.png')
+  background-size cover
+
+  &__wrapper
+    display flex
+    justify-content space-between
+    width 710px
+    margin 0 auto
+    padding 40px 0 33px 0
+
+  &__info
+    margin-top 7px
+    position relative
+
+  &__contacts
+    text-align right
+    &:before
+      content ''
+      dispalay block
+      position absolute
+      width 33px
+      height 33px
+      right 145px
+      background url('../img/header/number-icon.png') center center
+  &__number
+    margin 0
+    font-size 14px
+    color #c20672
+
+  &__lists
+    margin 0
+    padding 0
+    list-style none
+    margin-top 20px
+
+  &__item
+    display inline-block
+    font-size 16px
+    text-transform uppercase
+    margin-right 10px
+    min-width 80px
+    text-align center
+    a
+      text-decoration none
+      color #c20672
+      letter-spacing 2px
+    &:hover
+      border-bottom 1px solid #c20672
+  &__item:last-child
+    margin-right 0

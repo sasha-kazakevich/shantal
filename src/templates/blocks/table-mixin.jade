@@ -1,0 +1,142 @@
+mixin serviceCard (src,title,text1,text2,text3)
+  section.serviceCard
+    div.serviceCard__image
+      img(src= src alt="imgCard")
+    section.serviceCard__info
+      h1.serviceCard__title= title
+      p.serviceCard__text= text1
+      p.serviceCard__text= text2
+      p.serviceCard__text= text3
+      
+mixin tableRowOne(col11,col21,col31)
+  tr
+    td
+      p.name= col11
+    td
+      p= col21
+    td
+      p= col31
+      
+mixin tableRowTwo(col11,col12,col21,col22,col31,col32)
+  tr
+    td
+      p.name= col11
+      p.list= col12
+    td
+      p.clear= col21
+      p= col22
+    td
+      p.clear= col31
+      p= col32
+      
+mixin tableRowThree(col11,col12,col13,col21,col22,col23,col31,col32,col33)
+  tr
+    td
+      p.name= col11
+      p.list= col12
+      p.list= col13
+    td
+      p.clear= col21
+      p= col22
+      p= col23
+    td
+      p.clear= col31
+      p= col32
+      p= col33
+      
+mixin tableRowFour(col11,col12,col13,col14,col21,col22,col23,col24,col31,col32,col33,col34)
+  tr
+    td
+      p.name= col11
+      p.list= col12
+      p.list= col13
+      p.list= col14
+    td
+      p.clear= col21
+      p= col22
+      p= col23
+      p= col24
+    td
+      p.clear= col31
+      p= col32
+      p= col33
+      p= col34
+      
+mixin tableRowFive(col11,col12,col13,col14,col15,col21,col22,col23,col24,col25,col31,col32,col33,col34,col35)
+  tr
+    td
+      p.name= col11
+      p.list= col12
+      p.list= col13
+      p.list= col14
+      p.list= col15
+    td
+      p.clear= col21
+      p= col22
+      p= col23
+      p= col24
+      p= col25
+    td
+      p.clear= col31
+      p= col32
+      p= col33
+      p= col34
+      p= col35
+      
+mixin tableRowSix(col11,col12,col13,col14,col15,col16,col21,col22,col23,col24,col25,col26,col31,col32,col33,col34,col35,col36)
+  tr
+    td
+      p.name= col11
+      p.list= col12
+      p.list= col13
+      p.list= col14
+      p.list= col15
+      p.list= col16
+    td
+      p.clear-dob= col21
+      p= col22
+      p= col23
+      p= col24
+      p= col25
+      p= col26
+    td
+      p= col31
+      p= col32
+      p= col33
+      p= col34
+      p= col35
+      p= col36
+      
+mixin tableRowTwoServiceOne(col11,col21,col31,col41)
+  tr
+    td
+      p.name= col11
+    td
+      p= col21
+    td
+      p= col31
+    td
+      p= col41
+      
+mixin tableRowTwoServiceFour(col11,col12,col13,col14,col21,col22,col23,col24,col31,col32,col33,col34,col41,col42,col43,col44)
+  tr
+    td
+      p.name= col11
+      p.list-mod= col12
+      p.list-mod= col13
+      p.list-mod= col14
+    td
+      p.clear.manicureP= col21
+      p.pad= col22
+      p.pad= col23
+      p= col24
+    td
+      p.clear= col31
+      p.pad= col32
+      p.pad= col33
+      p= col34
+    td
+      p.clear= col41
+      p.pad= col42
+      p.pad= col43
+      p= col44
