@@ -8,17 +8,16 @@ $(document).ready(function(){
 
 		switch (elem) {
 			case "b":
-			$('#body').animate({scrollTop: 450},800);
+			$('html,body').animate({scrollTop: 450},800);
 			break;
 			case "c":
-			$('#body').animate({scrollTop: 1430},800);
+			$('html,body').animate({scrollTop: 1430},800);
 			break;
 			case "d":
-			$('#body').animate({scrollTop: 1916},800);
+			$('html,body').animate({scrollTop: 1916},800);
 			break;
 		}
 	});
-
 
 	$(window).scroll(function(){
 		if($(this).scrollTop() > 200){
@@ -27,24 +26,29 @@ $(document).ready(function(){
 	});
 
 	$("#up").click(function(){
-		console.log("click");
-		$("html,body").animate({scrollTop: 0}, 1000);
+		$('html,body').animate({scrollTop: 0}, 1000);
 		return false;
 	});
 
 
-    var map;
+	var map;
 
-   		ymaps.ready(function(){
+		ymaps.ready(function(){
 
 
-   		var placemark = new ymaps.Placemark([53.946843,27.68808]);
-        map = new ymaps.Map(document.getElementById('map'), {
-            center: [53.946843, 27.68808],
-            zoom: 16
-        });
-        map.geoObjects.add(placemark);
-        
-    });
+		var placemark = new ymaps.Placemark([53.946843,27.68808],{
+			hintContent: 'Салон Красоты Шанталь'
+		},
+		{
+			preset: 'twirl#redDotIcon'
+		});
+
+		map = new ymaps.Map(document.getElementById('map'), {
+			center: [53.946843, 27.68808],
+			zoom: 16
+		});
+		map.geoObjects.add(placemark);
+		map.controls.add("zoomControl").add("typeSelector");
+	});
 
 });

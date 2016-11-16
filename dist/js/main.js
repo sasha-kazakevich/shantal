@@ -46,7 +46,7 @@
 
 	__webpack_require__(1);
 	var $ = __webpack_require__(4);
-	__webpack_require__(13);
+	__webpack_require__(12);
 
 	$(document).ready(function(){
 		$(".menu").on("click","a",function(event){
@@ -54,17 +54,16 @@
 
 			switch (elem) {
 				case "b":
-				$('#body').animate({scrollTop: 450},800);
+				$('html,body').animate({scrollTop: 450},800);
 				break;
 				case "c":
-				$('#body').animate({scrollTop: 1430},800);
+				$('html,body').animate({scrollTop: 1430},800);
 				break;
 				case "d":
-				$('#body').animate({scrollTop: 1916},800);
+				$('html,body').animate({scrollTop: 1916},800);
 				break;
 			}
 		});
-
 
 		$(window).scroll(function(){
 			if($(this).scrollTop() > 200){
@@ -73,25 +72,30 @@
 		});
 
 		$("#up").click(function(){
-			console.log("click");
-			$("html,body").animate({scrollTop: 0}, 1000);
+			$('html,body').animate({scrollTop: 0}, 1000);
 			return false;
 		});
 
 
-	    var map;
+		var map;
 
-	   		ymaps.ready(function(){
+			ymaps.ready(function(){
 
 
-	   		var placemark = new ymaps.Placemark([53.946843,27.68808]);
-	        map = new ymaps.Map(document.getElementById('map'), {
-	            center: [53.946843, 27.68808],
-	            zoom: 16
-	        });
-	        map.geoObjects.add(placemark);
-	        
-	    });
+			var placemark = new ymaps.Placemark([53.946843,27.68808],{
+				hintContent: 'Салон Красоты Шанталь'
+			},
+			{
+				preset: 'twirl#redDotIcon'
+			});
+
+			map = new ymaps.Map(document.getElementById('map'), {
+				center: [53.946843, 27.68808],
+				zoom: 16
+			});
+			map.geoObjects.add(placemark);
+			map.controls.add("zoomControl").add("typeSelector");
+		});
 
 	});
 
@@ -102,13 +106,14 @@
 
 	var routes = __webpack_require__(2);
 	var callback = __webpack_require__(6);
-	var page = __webpack_require__(9);
+	var page = __webpack_require__(8);
 
 	page('/', routes.main,callback.main);
-	page('/parik',routes.parik,callback.parik);
-	page('/depil', routes.depil,callback.depil);
+	page('/barbershop',routes.parik,callback.parik);
+	page('/depilation', routes.depil,callback.depil);
 	page('/nails', routes.nails,callback.nails);
-	page('/kosmo', routes.kosmo,callback.kosmo);
+	page('/cosmetology', routes.kosmo,callback.kosmo);
+
 
 	page();
 
@@ -10401,30 +10406,28 @@
 
 	var $ = __webpack_require__(4);
 	var scroll = __webpack_require__(7);
-	var position = __webpack_require__(8);
-
 
 	var callback = {
 		main: function(ctx,next){
 			$('#title').click(function() {
 				$('#map').lightbox_me();
 			});
+
+			$("#cert").on("click",function(){
+				$('html,body').animate({scrollTop: 2486},800);
+			});
 		},
 		parik: function(ctx,next){
 			scroll();
-			// position();
 		},
 		depil: function(ctx,next){
 			scroll();
-			// position();
 		},
 		nails: function(ctx,next){
 			scroll();
-			// position();
 		},
 		kosmo: function(ctx,next){
 			scroll();
-			// position();
 		}
 	}
 
@@ -10439,38 +10442,12 @@
 	var $ = __webpack_require__(4);
 
 	module.exports = function() {
-		console.log('top');
-		$('#body').scrollTop(0);
+		$('html,body').scrollTop(0);
 		return false;
 	}
 
 /***/ },
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $ = __webpack_require__(4);
-
-	module.exports = function(){
-		$(".menu").on("click","a",function(event){
-			var elem = event.target.className;
-
-				switch (elem) {
-					case "b":
-					$('#body').animate({scrollTop: 450},800);
-					break;
-					case "c":
-					$('#body').animate({scrollTop: 1430},800);
-					break;
-					case "d":
-					$('#body').animate({scrollTop: 1916},800);
-					break;
-				}
-			});
-		return false;
-	}	
-
-/***/ },
-/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {  /* globals require, module */
@@ -10481,7 +10458,7 @@
 	   * Module dependencies.
 	   */
 
-	  var pathtoRegexp = __webpack_require__(11);
+	  var pathtoRegexp = __webpack_require__(10);
 
 	  /**
 	   * Module exports.
@@ -11096,10 +11073,10 @@
 
 	  page.sameOrigin = sameOrigin;
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -11285,10 +11262,10 @@
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isarray = __webpack_require__(12)
+	var isarray = __webpack_require__(11)
 
 	/**
 	 * Expose `pathToRegexp`.
@@ -11681,7 +11658,7 @@
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	module.exports = Array.isArray || function (arr) {
@@ -11690,7 +11667,7 @@
 
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var $ = __webpack_require__(4);

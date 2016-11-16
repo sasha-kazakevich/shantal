@@ -1,29 +1,27 @@
 var $ = require('jquery');
 var scroll = require('./scroll');
-var position = require('./position');
-
 
 var callback = {
 	main: function(ctx,next){
 		$('#title').click(function() {
 			$('#map').lightbox_me();
 		});
+
+		$("#cert").on("click",function(){
+			$('html,body').animate({scrollTop: 2486},800);
+		});
 	},
 	parik: function(ctx,next){
 		scroll();
-		// position();
 	},
 	depil: function(ctx,next){
 		scroll();
-		// position();
 	},
 	nails: function(ctx,next){
 		scroll();
-		// position();
 	},
 	kosmo: function(ctx,next){
 		scroll();
-		// position();
 	}
 }
 

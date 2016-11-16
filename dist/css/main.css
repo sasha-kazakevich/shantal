@@ -215,7 +215,7 @@ body {
 }
 body {
   font-family: 'HelveticaNeueCyr-Light';
-  height: 100%;
+  height: auto;
 }
 .content-wrapper {
   width: 720px;
@@ -246,18 +246,6 @@ body {
 }
 ::-webkit-resizer {
   background-color: #666;
-}
-#up {
-  width: 50px;
-  height: 50px;
-  display: none;
-  border: 1px solid #000;
-  background-color: #000;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 100;
-  cursor: pointer;
 }
 .header {
   background: url("../img/header/header-bg.png");
@@ -311,9 +299,13 @@ body {
   text-decoration: none;
   color: #c20672;
   letter-spacing: 2px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  outline: none;
 }
-.header__item:hover {
-  border-bottom: 1px solid #c20672;
+.header__item a:hover {
+  background: url("../img/header/hover.png") center center;
+  background-size: cover;
 }
 .header__item:last-child {
   margin-right: 0;
@@ -362,7 +354,7 @@ body {
   line-height: 1.3;
 }
 .about__images {
-  margin-top: 15px;
+  margin: 15px 0px;
   overflow: hidden;
 }
 .about__image {
@@ -400,7 +392,7 @@ body {
   margin-right: 0;
 }
 .services__service:hover {
-  box-shadow: 10px 15px 15px 1px #fed9f7;
+  box-shadow: 0px 0px 2px 3px #f0caeb;
 }
 .services__image-block {
   width: 210px;
@@ -462,8 +454,38 @@ body {
 .contacts__adress {
   width: 400px;
 }
+.contacts__wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-align-items: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
 .contacts__space {
   margin-left: 30px;
+}
+.contacts__map {
+  margin-top: 40px;
+  cursor: pointer;
+}
+.certificate {
+  background: url("../img/main/certificate/cer-bg.png");
+  background-size: cover;
+}
+.certificate__text {
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1.1px;
+  line-height: 1.3;
+}
+.certificate__img {
+  text-align: center;
+  padding: 10px 0;
 }
 .table-page {
   background-color: #fed9f7;
@@ -498,7 +520,11 @@ body {
   display: -webkit-flex;
   display: flex;
 }
+.serviceCard__image {
+  width: 100%;
+}
 .serviceCard__info {
+  width: 543px;
   height: 356px;
   padding-left: 15px;
   overflow-y: auto;
@@ -576,6 +602,9 @@ body {
   padding-left: 15px;
   text-align: left;
 }
+.table table td .spec {
+  padding: 5px;
+}
 .table .manicure .manicureP {
   margin-top: -30px;
 }
@@ -592,8 +621,19 @@ body {
   font-size: 13px;
   font-weight: bold;
 }
-#map {
+.up {
+  width: 40px;
+  height: 40px;
+  display: none;
+  background: url("../img/footer/btn.png") center center no-repeat;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+  cursor: pointer;
+}
+.map {
   display: none;
   height: 500px;
-  width: 700px;
+  width: 800px;
 }

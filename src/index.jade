@@ -1,29 +1,25 @@
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="format-detection", content="telephone=no")
     
-    title Boilerplate
-    
+    title Салон красоты "Шанталь"
+    meta(name="keywords" content=" цены, Минск, салон красоты, уручье, наращивание, парикмахер , парикмахерская, метро, ложинская 5, городецкая, стариновская, шафарнянская, косметолог, проспект независимости 183, ложинская 7, ногти , окраска волос, наращивание, чистка лица, педикюр")
+    meta(name="description" content="Добро пожаловать в салон красоты 'Шанталь', который поразит вас своим уютом и теплотой. Мы будем рады возможности предоставить вам наши услуги и удивить высоким качеством обслуживания.") 
     link(rel="stylesheet" href="./css/main.css")
-    
+    link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
+
+    script(src="js/main.js")
     
   body#body
   
     include ./templates/blocks/header.jade
-    //- include ./blocks/parik.jade
-    //- include ./blocks/nails.jade
-    //- include ./blocks/kosmo.jade
-    //- include ./blocks/depil.jade
-    //- include ./blocks/main.jade
 
     section#content
 
     include ./templates/blocks/footer.jade
     
-    script(type="text/javascript" src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU")
-    //- script(src="js/lib/jquery.js")
-    //- script(src="js/lib/jquery.lightbox_me.js")
-    script(src="js/main.js")
+    script(type="text/javascript" src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" defer)
+    
